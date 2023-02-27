@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu primeiro programa...</title>
     <style>
-        body{ /* Comentário em CSS */
+        body{
             background-color: rgb(105, 105, 173) ;
-            color: white;
+            color: white; /* Comentário em CSS */
             font: normal 20pt Arial;
         }
         h1 {
@@ -20,11 +20,13 @@
     <h1>Olá, mundo!</h1> <!-- Isso é um comentário em HTML -->
     <p>Já me livrei da maldição!!</p>
     <script>
-        window.alert('Minha primeira mensagem!') // Comentário em JS
-        window.confirm('Está gostando de JS?')
-        window.prompt('Qual é seu nome?')
-        var nome = window.prompt('Qual é seu nome?')
-        window.alert('É um grande prazer te conhecer, ' + nome + '!')
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        s.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}.`)
+        var nome = window.prompt('Qual é o seu nome? ')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.`)
     </script>
 </body>
 </html>
